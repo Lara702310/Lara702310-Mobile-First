@@ -1,0 +1,61 @@
+@use "./variables" as v;
+
+@mixin flex-base($justify: center, $align: center, $direction: row) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin flex-wrap($flex-direction: null, $flex-wrap: null) {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+@mixin grid-base($justify: center, $align: center) {
+  display: grid;
+  justify-content: $justify;
+  align-items: $align;
+
+}
+
+@mixin font-style($size: null, $weight: null, $line: null, $color: null) {
+
+  @if $size {
+    font-size: $size;
+  }
+
+  @if $weight {
+    font-weight: $weight;
+  }
+
+  @if $line {
+    line-height: $line;
+  }
+
+  @if $color {
+    color: $color;
+  }
+
+}
+
+@mixin btn-style {
+  width: 10.3rem;
+  height: 3.7rem;
+  padding: 1rem 1.5rem;
+  cursor: pointer;
+  text-align: center;
+
+
+}
+
+@mixin card-style($max-width: nuul, $height: nuul) {
+  width: $max-width;
+  height: $height;
+  background-color: v.$bg-page-color;
+  border-top: 0.4rem solid v.$bg-header-color;
+  border-radius: 1.2rem;
+  box-shadow: 0 0.4rem 1rem rgba(0, 0, 0, 0.2);
+  
+}
